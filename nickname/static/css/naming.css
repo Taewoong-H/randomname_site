@@ -1,0 +1,10 @@
+.btn {
+    margin-top: 20px;
+}
+
+#answer {
+    box-sizing: border-box;
+    border: 10px solid gray;
+    margin: 30px;
+    padding: 30px;
+}
