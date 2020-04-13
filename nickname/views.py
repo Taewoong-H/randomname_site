@@ -20,7 +20,7 @@ def select_catagory(request):
 
 
 def result_name(request, pk):
-    posts = get_object_or_404(Index, pk=pk)
+    posts = get_object_or_404(Index, pk=pk) # Index.objects.get(pk=pk)랑 비슷한 뜻
     if posts.pk==2:
         start = Adjective.objects.annotate(Count('name'))
         last = Food.objects.annotate(Count('name'))

@@ -19,6 +19,7 @@ class Food(models.Model):
     def __str__(self):
         return self.name
 
+#각각의 카테고리 저장해두기
 class Index(models.Model):
     name = models.CharField(max_length=50)
     num = models.IntegerField(default=0)
