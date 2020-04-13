@@ -18,5 +18,12 @@ class Food(models.Model):
 
     def __str__(self):
         return self.name
+
+class Index(models.Model):
+    name = models.CharField(max_length=50)
+    num = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name
          
     

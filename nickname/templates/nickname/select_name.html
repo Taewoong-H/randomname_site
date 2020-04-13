@@ -18,19 +18,19 @@
         </h1>
     </div>
     <div>
-        <div>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">동물</button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">음식</button>
-        </div>
-        <div>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">시작하기</button>
-        </div>
+        <h3> 
+            원하는 타입을 선택하세요 
+        </h3>
     </div>
-    <div id="answer">
-        
-        {% for post in posts %}
-            {{ post }}
+    <div>
+        {% for cat in catagory %}
+        <div class="btn">
+            <button type="submit" class="btn btn-secondary btn-lg btn-block"><a href="{% url 'result_name' pk=cat.pk %}">{{ cat }}</a></button>
+        </div>
         {% endfor %}
-    </div> 
+        
+    </div>
+    {% block content %}
+    {% endblock %} 
 </body>
 </html>
