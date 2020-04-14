@@ -10,7 +10,7 @@ from nickname.models import Food
 def name_food():
     # 1페이지 : https://ko.wiktionary.org/wiki/%EB%B6%84%EB%A5%98:%ED%95%9C%EA%B5%AD%EC%96%B4_%EC%9D%8C%EC%8B%9D
     # 2페이지 : https://ko.wiktionary.org/w/index.php?title=%EB%B6%84%EB%A5%98:%ED%95%9C%EA%B5%AD%EC%96%B4_%EC%9D%8C%EC%8B%9D&pagefrom=%EC%85%94%EB%B2%97#mw-pages
-    req = requests.get('https://ko.wiktionary.org/w/index.php?title=%EB%B6%84%EB%A5%98:%ED%95%9C%EA%B5%AD%EC%96%B4_%EC%9D%8C%EC%8B%9D&pagefrom=%EC%85%94%EB%B2%97#mw-pages')
+    req = requests.get('https://ko.wiktionary.org/wiki/%EB%B6%84%EB%A5%98:%ED%95%9C%EA%B5%AD%EC%96%B4_%EC%9D%8C%EC%8B%9D')
     html = req.content.decode('utf-8','replace') #한글이 깨져서 넣어주었다.
     soup = BeautifulSoup(html, 'html.parser')
     #select하는데 자꾸 td별로 구분되어서 아예 젤 마지막 부분으로 분류하였더니 하나씩 구분되었다.
