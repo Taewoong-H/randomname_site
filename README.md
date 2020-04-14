@@ -8,4 +8,4 @@ DB안에 각 테마별 단어들을 crawling하여 DB(postrgreSQL)안에 저장�
 어느정도 구성만 짜뒀고 계속 데이터베이스 추가할 예정이다.
 
 heroku로 배포 완료
-- https://obscure-coast-32051.herokuapp.com/
+- https://teorandomname.herokuapp.com/
