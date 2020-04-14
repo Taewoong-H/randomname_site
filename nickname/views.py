@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
-from .models import Animal, Adjective, Food, Index
+from .models import Animal, Adjective, Color, Food, Index
 import random
 
 # Create your views here.
@@ -31,6 +31,13 @@ def result_name(request, pk):
     elif posts.pk==1:
         start = Adjective.objects.annotate(Count('name'))
         last = Animal.objects.annotate(Count('name'))
+        i = random.randrange(1, len(last))
+        j = random.randrange(1, len(start))
+        post = start[j] , last[i]
+        return render(request, 'nickname/result.html', {'post':post})
+    elif posts.pk==3:
+        start = Adjective.objects.annotate(Count('name'))
+        last = Color.objects.annotate(Count('name'))
         i = random.randrange(1, len(last))
         j = random.randrange(1, len(start))
         post = start[j] , last[i]

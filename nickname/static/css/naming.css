@@ -8,3 +8,26 @@
     margin: 30px;
     padding: 30px;
 }
+
+
+.container {
+    display: grid;
+    margin-top: 100px;
+}
+
+.header, .explain, .btn_space, .bottom {
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 10rem;
+
+}
+
+.explain {
+    margin-top: 10px;
+}
+
+.result {
+    text-align: center;
+}

@@ -12,25 +12,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h1>
-            랜덤 닉네임 생성기
-        </h1>
-    </div>
-    <div>
-        <h3> 
-            원하는 타입을 선택하세요 
-        </h3>
-    </div>
-    <div>
-        {% for cat in catagory %}
-        <div class="btn">
-            <button type="submit" class="btn btn-secondary btn-lg btn-block"><a href="{% url 'result_name' pk=cat.pk %}">{{ cat }}</a></button>
+    <div class="container">
+        <div>
+            <h1 class="header">
+                랜덤 닉네임 생성기
+            </h1>
         </div>
-        {% endfor %}
-        
+        <div>
+            <h3 class="explain"> 
+                원하는 타입을 선택하세요 
+            </h3>
+        </div>
+        <div class="btn_space">
+            {% for cat in catagory %}
+            <div class="btn">
+                <a class="btn btn-primary" href="{% url 'result_name' pk=cat.pk %}" role="button">{{ cat }}</a>
+            </div>
+            {% endfor %}
+            
+        </div>
+        {% block content %}
+        {% endblock %} 
+        <div class="bottom">
+            👉make by <a href="https://github.com/Taewoong-H">@teo</a>👈
+        </div>
     </div>
-    {% block content %}
-    {% endblock %} 
 </body>
 </html>

@@ -1,12 +1,13 @@
 {% extends 'nickname/select_name.html' %}
 
 {% block content %}
-<div class="button_space"></div>
     <div id="answer">
-    {% for i in post %}
+        <p class="result"><strong>
+            {% for i in post %}
 
-        {{ i }}
+                {{ i }}
 
-    {% endfor %}
+            {% endfor %}
+        </strong></p>    
     </div>
 {% endblock %}
