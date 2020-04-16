@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
-from .models import Animal, Adjective, Color, Food, Index
+from .models import Animal, Adjective, Color, Food, Index, Place
 import random
 
 # Create your views here.
@@ -45,3 +45,20 @@ def result_name(request, pk):
     else:
         return render(request, 'nickname/result.html', {'posts': posts})
 
+def throw(request):
+    return render(request, 'nickname/select_name.html')
+
+def catch(request):
+    message = request.GET.get('message')
+    placing = Place.objects.annotate(Count('name'))
+    i = random.randrange(0, len(placing))
+    naming = placing[i]
+    messages = message, naming
+    return render(request, 'nickname/catch.html', {'messages':messages})
+'''
+def place_name(request):
+    placing = Place.objects.annotate(Count('name'))
+    i = random.randrange(1, len(placing))
+    naming = placing[i]
+    return render(request, 'nickname/catch.html', {'naming':naming})
+'''

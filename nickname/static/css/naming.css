@@ -1,5 +1,15 @@
+div{
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.home{
+    color: rgb(72, 72, 226);
+    margin-left: 30px;
+    width:50px;
+}
+
 .btn {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #answer {
@@ -7,12 +17,14 @@
     border: 10px solid gray;
     margin: 30px;
     padding: 30px;
+    margin-top: 83px;
+    margin-bottom: 83px;
 }
 
 
 .container {
     display: grid;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .header, .explain, .btn_space, .bottom {
@@ -20,17 +32,38 @@
 }
 
 .footer {
-    position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
 }
+
 
 .explain {
     margin-top: 10px;
 }
 
 .result {
+    text-align: center;
+}
+
+.form-group{
+    margin-top: 10px;
+}
+
+.form-control{
+    
+    width: 400px;
+    float: center;
+}
+
+.name2{
+    margin-top: 50px;
+}
+
+.name3{
     text-align: center;
 }

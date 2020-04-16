@@ -32,5 +32,12 @@ class Index(models.Model):
 
     def __str__(self):
         return self.name
+
+#잠실 멋쟁이
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
          
     

@@ -1,0 +1,13 @@
+{% extends 'nickname/select_name.html' %}
+
+{% block content %}
+    <div id="answer">
+        <p class="result"><strong>
+            {% for i in messages %}
+
+                {{ i }}
+
+            {% endfor %}
+        </strong></p>   
+    </div>
+{% endblock %}
