@@ -8,6 +8,3 @@ urlpatterns = [
     path('catch/', views.catch, name='catch'),
 ]
 
-'''
-path('catch/<str:message>', views.place_name, name='place_name'),
-'''

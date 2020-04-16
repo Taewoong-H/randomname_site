@@ -55,10 +55,3 @@ def catch(request):
     naming = placing[i]
     messages = message, naming
     return render(request, 'nickname/catch.html', {'messages':messages})
-'''
-def place_name(request):
-    placing = Place.objects.annotate(Count('name'))
-    i = random.randrange(1, len(placing))
-    naming = placing[i]
-    return render(request, 'nickname/catch.html', {'naming':naming})
-'''
