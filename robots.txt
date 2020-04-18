@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://teorandomname.herokuapp.com/sitemap.xml
