@@ -31,5 +31,3 @@ for j in range(len(name_animal())):
 if __name__ == '__main__':
     pool = Pool(processes=4)
     pool.map(save_name, b)
-
-
